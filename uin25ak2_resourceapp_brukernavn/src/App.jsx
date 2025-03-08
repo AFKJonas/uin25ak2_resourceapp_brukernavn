@@ -1,23 +1,30 @@
-import React from 'react'
-import { Routes, Route } from 'react-router-dom'
-import { useState } from 'react'
-import  Layout from './components/Layout'
+import React, { useState } from 'react'
+import { Routes, Route, BrowserRouter as Router } from 'react-router-dom'
+import Layout from './components/Layout'
 import Nav from './components/Nav'
-import PageTitle from './components/PageTitle'
-import { resources } from './resources/ressurser.js'
 import './App.css'
 import './style/style.scss'
+import Resources from './components/Resources'
 
 
 function App() {
+  const [category, setCategory] = useState("html");
   return (
     <>
-    <Nav resources={resources} />
-    <Layout>
-      <Routes>
-        <Route path="/" element={<Nav />} />
-      </Routes>
-    </Layout>
+    <Router>
+
+      <Layout>
+        <Nav setCategory={setCategory} />
+        <Routes>
+          <Route path="/" element={<Resources category={category} />} />
+          <Route path="/html" element={<Resources category="html" />} />
+          <Route path="/css" element={<Resources category="css" />} />
+          <Route path="/javascript" element={<Resources category="javascript" />} />
+          <Route path="/react" element={<Resources category="react" />} />
+          <Route path="/sanity" element={<Resources category="sanity" />} />
+        </Routes>
+      </Layout>
+    </Router>
     </>
   )
 }

@@ -1,6 +1,7 @@
 import React from 'react';
-import '../resources/ressurser.js';
-
 export default function PageTitle(){
+    return (
+        <h1>Overskrift å siden</h1>
+    )
     
 }
