@@ -5,12 +5,8 @@ export default function Nav() {
 
     return (
         <nav>
-            <h2>Kategorier</h2>
             {categories.map((cat) => (
-                <button key={cat}>
-                    {/* Direkte kopiert fra ChatGPT: */}
-                    <Link to={`/${cat}`}>{cat.toUpperCase()}</Link> 
-                </button>
+                    <Link key={cat} to={`/${cat}`} className="NavButtons">{cat}</Link> // Direkte kopiert fra ChatGPT
             ))}
         </nav>
     );

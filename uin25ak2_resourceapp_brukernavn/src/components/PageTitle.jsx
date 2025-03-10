@@ -1,7 +1,8 @@
 import React from 'react';
-export default function PageTitle(){
+export default function PageTitle({ category }){
     return (
-        <h1>Overskrift å siden</h1>
+        <h2>Ressurser for {category.toUpperCase()}</h2>
+        
     )
     
 }
