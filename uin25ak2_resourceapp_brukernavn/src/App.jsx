@@ -1,9 +1,13 @@
 import React, { useState } from 'react'
 import { Routes, Route, BrowserRouter as Router } from 'react-router-dom'
 import Layout from './components/Layout'
-import './App.css'
 import './style/style.scss'
+import './App.css'
 import Resources from './components/Resources'
+import './style/PageTitle.scss';
+import './style/Layout.scss';
+import './style/Nav.scss'
+import './style/Resources.scss';
 
 
 function App() {

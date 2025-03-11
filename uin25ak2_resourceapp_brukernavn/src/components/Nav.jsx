@@ -4,10 +4,12 @@ export default function Nav() {
     const categories = ["html", "css", "javascript", "react", "headless-cms"];
 
     return (
-        <nav>
+        <>
             {categories.map((cat) => (
-                    <Link key={cat} to={`/${cat}`} className="NavButtons">{cat}</Link> // Direkte kopiert fra ChatGPT
+                <Link to={`/${cat}`} key={cat}>
+                    <button className="NavButtons">{cat}</button>
+                </Link>
             ))}
-        </nav>
+        </>
     );
 }

@@ -7,7 +7,9 @@ export default function Layout({ children, setCategory }) {
     return (
         <>
         <header>
-            <Nav setCategory={setCategory} />    
+            <nav> 
+                <Nav setCategory={setCategory} /> 
+            </nav>   
         </header>
             <main>
                 { children }   

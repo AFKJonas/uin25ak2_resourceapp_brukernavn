@@ -7,14 +7,16 @@ export default function Resources({ category }) {
 
     return (
         <>
-        <PageTitle category={category}/>
-            <ul>
-                {filteredResources.map((resource) => (
-                    <li key={resource.id || resource.title}>
-                        <a href={resource.url} target="_blank">{resource.title}</a>
-                    </li>
-                ))}
-            </ul>
+        <article>
+            <PageTitle category={category}/>
+                <ul>
+                    {filteredResources.map((resource) => (
+                        <li key={resource.id || resource.title}>
+                            <a href={resource.url} target="_blank">{resource.title}</a>
+                        </li>
+                    ))}
+                </ul>
+        </article>
         </>
     );
 }

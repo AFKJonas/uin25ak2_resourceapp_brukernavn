@@ -1,0 +1,22 @@
+nav{
+    // display: flex;
+    // justify-content: space-between;
+
+    //Må se............
+
+
+    .NavButtons{
+        padding-top: 25px;
+        padding-left: 55px;
+        padding-right: 55px;
+        padding-bottom: 25px;
+        background-color: var(--blue2);
+        color: var(--whiteF);
+        border: none;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: bold;
+        font-family: "roboto", sans-serif;
+        border-radius: 0;
+    }  
+}
