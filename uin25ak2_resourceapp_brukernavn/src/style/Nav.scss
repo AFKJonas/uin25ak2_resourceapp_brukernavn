@@ -1,14 +1,15 @@
 nav{
-    // display: flex;
-    // justify-content: space-between;
+    display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 
-    //Må se............
+  
 
 
     .NavButtons{
         padding-top: 25px;
-        padding-left: 55px;
-        padding-right: 55px;
+        padding-left: 6rem;
+        padding-right: 6rem;
         padding-bottom: 25px;
         background-color: var(--blue2);
         color: var(--whiteF);
