@@ -1,7 +1,7 @@
 nav{
     display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+    justify-content: space-between;
+    flex-wrap: wrap;
 
   
 
@@ -19,5 +19,11 @@ nav{
         font-weight: bold;
         font-family: "roboto", sans-serif;
         border-radius: 0;
+        text-transform: uppercase;
     }  
+    
+    .NavButtons.active{
+        background-color: var(--whiteF);
+        color: black;
+    }
 }

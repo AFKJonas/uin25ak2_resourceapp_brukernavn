@@ -10,8 +10,10 @@ import './style/Nav.scss'
 import './style/Resources.scss';
 
 
+
 function App() {
   const [category] = useState("html");
+
   return (
     <>
      <Router>
