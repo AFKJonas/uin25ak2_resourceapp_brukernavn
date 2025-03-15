@@ -1,10 +1,19 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import"../Style/Nav.scss"; 
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import '../style/Nav.scss'
+
 export default function Nav() {
     const categories = ["html", "css", "javascript", "react", "headless-cms"];
-    
-    const [active, setActive] = useState(() => localStorage.getItem("activeCategory") || null);
+    const location = useLocation();
+    const [active, setActive] = useState(null);
+
+    useEffect(() => {
+        const path = location.pathname.substring(1);
+        if (categories.includes(path)) {
+            setActive(path);
+            localStorage.setItem("activeCategory", path);
+        }
+    }, [location.pathname]);
 
     const handleSetActive = (cat) => {
         setActive(cat);
